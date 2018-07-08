@@ -10,6 +10,7 @@ export type FieldProps = FormContext & {
   appendId?: string,
   overrideAction?: Function,
   className?: string,
+  style?: string,
 }
 
 export const extractPropsOverride = (props: FieldProps): {} => {

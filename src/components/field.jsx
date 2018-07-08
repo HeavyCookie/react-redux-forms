@@ -22,7 +22,7 @@ export const FieldErrors = ({ errors }: { errors: any }) =>
   ) : null)
 
 export const Field =
-  (props: { errors: any, children: React.Node, className?: string }) => {
+  (props: { errors: any, children: React.Node, className?: string, style?: string }) => {
     const hasErrors = props.errors != null
 
     let classes = ['field']
@@ -30,7 +30,7 @@ export const Field =
     if (props.className) classes = [...classes, props.className]
 
     return (
-      <div className={ classes.join(' ') }>
+      <div className={ classes.join(' ') } style={ props.style }>
         { props.children }
         <FieldErrors errors={props.errors} />
       </div>

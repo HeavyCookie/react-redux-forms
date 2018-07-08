@@ -19,7 +19,7 @@ export const SelectComponent = (props: Props) => {
   }
 
   return (
-    <Field errors={ errors } className={ props.className }>
+    <Field errors={ errors } className={ props.className } style={ props.style }>
       { props.label && <label htmlFor={ dashedName }>{ props.label }</label> }
       <select id={ dashedName } onChange={ update } value={ value || undefined }
         defaultValue={ props.placeholder } {...extractPropsOverride(props)}>

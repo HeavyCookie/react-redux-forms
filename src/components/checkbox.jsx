@@ -17,7 +17,7 @@ export const CheckboxComponent = (props: FieldProps) => {
   }
 
   return (
-    <Field errors={ errors } className={ props.className }>
+    <Field errors={ errors } className={ props.className } style={ props.style }>
       <div className="ui checkbox">
         <input
           type="checkbox"

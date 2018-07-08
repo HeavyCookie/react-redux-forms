@@ -20,7 +20,7 @@ export const RadioButtonsComponent = (props: RadioButtonsProps) => {
   const errors = getFieldErrors(props.model, mapping)
 
   return (
-    <Field errors={ errors } className={ props.className }>
+    <Field errors={ errors } className={ props.className } style={ props.style }>
       { props.label && <label>{ props.label }</label> }
       { props.values && Object.keys(props.values).map(
         k =>

@@ -30,7 +30,7 @@ export const InputComponent = (props: Props ) => {
   }
 
   return (
-    <Field errors={ errors } className={ props.className }>
+    <Field errors={ errors } className={ props.className } style={ props.style }>
       { props.label && <label htmlFor={ dashedName }>{ props.label }</label> }
       <input
         type={ props.type || 'text' }
