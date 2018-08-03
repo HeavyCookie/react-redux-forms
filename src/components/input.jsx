@@ -23,6 +23,8 @@ export const InputComponent = (props: Props ) => {
       if(props.type === 'file') {
         const file = event.target.files[0]
         props.dispatch(props.action(mapping, file))
+      } else if (props.type === 'number') {
+        props.dispatch(props.action(mapping, parseFloat(event.target.value)))
       } else {
         props.dispatch(props.action(mapping, event.target.value))
       }
